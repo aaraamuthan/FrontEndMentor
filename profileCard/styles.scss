@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+// Variables
+$primary--color: hsl(185, 75%, 39%);
+$secondary--color: hsl(229, 23%, 23%);
+$tertiary--color: hsl(227, 10%, 46%);
+$gray--color: hsl(0, 0%, 59%);
+$black--color: #1c1d26;
+$white--color: #fff;
+
+$mobile-screens: 450px;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: $primary--color;
+  background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 10px;
+
+  color: $black--color;
+
+  span {
+    margin-left: 10px;
+    font-weight: 400;
+    // font-size: 16px;
+    color: $gray--color;
+    // color: #c7c8c5;
+  }
+}
+
+.paragraph {
+  color: $gray--color;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.card {
+  width: 390px;
+  height: 390px;
+  background-color: $white--color;
+  box-shadow: 0 5px 20px rgba($black--color, 0.3);
+  border-radius: 10px;
+
+  &__header {
+    background-image: url(images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 30%;
+  }
+
+  &__middle {
+    display: flex;
+    justify-content: center;
+    transform: translateY(-50%);
+    // height: 30%;
+
+    img {
+      border: 2px $white--color solid;
+      border-radius: 50%;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 40%;
+
+    & .person__details {
+      transform: translateY(-40%);
+    }
+
+    & .person__stats {
+      padding-bottom: 10px;
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      text-align: center;
+
+      & > * > :nth-child(2) {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $black--color;
+  text-align: center;
+
+  a {
+    color: $secondary--color;
+    text-decoration: none;
+
+    &:hover {
+      color: $white--color;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-screens) {
+  body {
+    background-position: right 25vw bottom 50vh, left 25vw top 50vh;
+  }
+  .card {
+    width: 90%;
+  }
+  footer {
+    bottom: 30px;
+  }
+}

@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: #19a2ae;
+  background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 10px;
+  color: #1c1d26;
+}
+
+.heading span {
+  margin-left: 10px;
+  font-weight: 400;
+  color: #969696;
+}
+
+.paragraph {
+  color: #969696;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.card {
+  width: 390px;
+  height: 390px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 20px rgba(28, 29, 38, 0.3);
+          box-shadow: 0 5px 20px rgba(28, 29, 38, 0.3);
+  border-radius: 10px;
+}
+
+.card__header {
+  background-image: url(images/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 30%;
+}
+
+.card__middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.card__middle img {
+  border: 2px #fff solid;
+  border-radius: 50%;
+}
+
+.card__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 40%;
+}
+
+.card__bottom .person__details {
+  -webkit-transform: translateY(-40%);
+          transform: translateY(-40%);
+}
+
+.card__bottom .person__stats {
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+.card__bottom .person__stats > * > :nth-child(2) {
+  font-size: 12px;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #1c1d26;
+  text-align: center;
+}
+
+footer a {
+  color: #2d3248;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    background-position: right 25vw bottom 50vh, left 25vw top 50vh;
+  }
+  .card {
+    width: 90%;
+  }
+  footer {
+    bottom: 30px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
